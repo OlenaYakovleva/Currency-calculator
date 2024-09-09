@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>JS_Forms</title>
+  </head>
+  <body onload="initialize();">
+    <main>
+      <!-- for pictures -->
+
+      <table id="tbl">
+        <tr>
+          <th>Currency</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>USD</td>
+          <td>
+            <img src="img/USD.png" alt="USA Flag" />
+          </td>
+        </tr>
+        <tr>
+          <td>EUR</td>
+          <td>
+            <img src="img/EUR.png" alt="EU Flag" />
+          </td>
+        </tr>
+        <tr>
+          <td>PLN</td>
+          <td>
+            <img src="img/PLN.png" alt="Poland Flag" />
+          </td>
+        </tr>
+      </table>
+
+      <form action="">
+        <input type="number" placeholder="sum of money" id="sum" />
+        <label for="from">From:</label>
+
+        <select id="from">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="PLN" selected>PLN</option>
+          <option value="UAH" selected>UAH</option>
+        </select>
+
+        <!-- //we can remove all options, just leaving UAH. they will be added
+        automatically in js -->
+
+        <label for="to">To:</label>
+        <select id="to">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="PLN">PLN</option>
+          <option value="UAH" selected>UAH</option>
+        </select>
+        <input type="button" id="convert" value="convert" />
+
+        <input type="text" id="result" placeholder="result" readonly />
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
